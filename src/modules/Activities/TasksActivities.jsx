@@ -21,6 +21,7 @@ function TasksActivities() {
       );
       if (res.status === 200) {
         const { data } = res;
+        console.log(data, "data");
         setTaskList(data);
       }
 

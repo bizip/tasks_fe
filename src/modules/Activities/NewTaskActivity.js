@@ -220,14 +220,25 @@ function NewTaskActivity() {
           </ul>
         </div>
 
-        <div className="text-center">
+        <div className="flex mb-4 -mx-2">
+          <div className="w-1/2 px-2">
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="file_input">Upload file</label>
+            <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" id="file_input" type="file" />
+
+          </div>
+          <div className="w-1/2 px-2" />
+        </div>
+
+        <div className="text-right">
+
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 pt-4"
           >
             Register
           </button>
         </div>
+
       </form>
 
     </section>
