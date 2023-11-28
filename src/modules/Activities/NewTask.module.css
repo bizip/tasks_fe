@@ -1,0 +1,10 @@
+.formContent{
+    padding: 4rem 8rem;
+
+}
+.formHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+}
