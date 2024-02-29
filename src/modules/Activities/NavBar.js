@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import isAuth from '../../helpers/isAuth';
@@ -6,7 +6,6 @@ import { toggleTheme } from '../../redux/theme/themeSlice';
 import Secure from '../../utils/SecureLs';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const theme = useSelector((state) => state.theme.theme);
 
   const navigate = useNavigate();
@@ -25,10 +24,7 @@ const NavBar = () => {
     <nav className="bg-white dark:bg-slate-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <NavLink to="/" className="flex items-center">
-          <p className="h-8 mr-3 text-blue transform scale-150 dark:text-gray-300">Task</p>
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-gray-300">
-            manager
-          </span>
+          <p className="h-8 mr-3 text-blue transform scale-150 dark:text-gray-300">Task manager</p>
         </NavLink>
         <div className="flex md:order-2">
           {!user && (

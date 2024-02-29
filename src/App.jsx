@@ -19,12 +19,12 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <TasksActivities />,
-    // loader() {
-    //   if (!user) {
-    //     throw redirect('/Login');
-    //   }
-    //   return <div>Loading...</div>;
-    // },
+    loader() {
+      if (!user) {
+        throw redirect('/Login');
+      }
+      return <div>Loading...</div>;
+    },
   },
 
   {
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
     path: '/new',
     element: <NewTaskActivity />,
     loader() {
-      if (user) {
+      if (!user) {
         throw redirect('/');
       }
       return <div>Loading...</div>;
